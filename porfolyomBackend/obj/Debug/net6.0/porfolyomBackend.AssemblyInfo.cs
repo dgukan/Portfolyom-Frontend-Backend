@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("porfolyomBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45e545913c30f35eec2c25ded0647f8aea6771df")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("porfolyomBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("porfolyomBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

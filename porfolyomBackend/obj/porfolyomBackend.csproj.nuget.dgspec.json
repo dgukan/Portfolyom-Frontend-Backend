@@ -1,25 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "/home/dk/source/Porfolyom-Frontend-Backend/porfolyomBackend/porfolyomBackend.csproj": {}
+    "/home/denzi/src/Portfolyom-Frontend-Backend/porfolyomBackend/porfolyomBackend.csproj": {}
   },
   "projects": {
-    "/home/dk/source/Porfolyom-Frontend-Backend/porfolyomBackend/porfolyomBackend.csproj": {
+    "/home/denzi/src/Portfolyom-Frontend-Backend/porfolyomBackend/porfolyomBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dk/source/Porfolyom-Frontend-Backend/porfolyomBackend/porfolyomBackend.csproj",
+        "projectUniqueName": "/home/denzi/src/Portfolyom-Frontend-Backend/porfolyomBackend/porfolyomBackend.csproj",
         "projectName": "porfolyomBackend",
-        "projectPath": "/home/dk/source/Porfolyom-Frontend-Backend/porfolyomBackend/porfolyomBackend.csproj",
-        "packagesPath": "/home/dk/.nuget/packages/",
-        "outputPath": "/home/dk/source/Porfolyom-Frontend-Backend/porfolyomBackend/obj/",
+        "projectPath": "/home/denzi/src/Portfolyom-Frontend-Backend/porfolyomBackend/porfolyomBackend.csproj",
+        "packagesPath": "/home/denzi/.nuget/packages/",
+        "outputPath": "/home/denzi/src/Portfolyom-Frontend-Backend/porfolyomBackend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/dk/.nuget/NuGet/NuGet.Config"
+          "/home/denzi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "/usr/share/dotnet/sdk/7.0.305/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -62,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.305/RuntimeIdentifierGraph.json"
         }
       }
     }
