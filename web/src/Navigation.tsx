@@ -1,6 +1,7 @@
-import { data } from "./data";
+import { ComponentData } from "./data";
 
-const Navigation = () => {
+
+const Navigation = (params: {data: ComponentData}) => {
     function openMenu(event: React.MouseEvent<HTMLAnchorElement>): void {
         event.preventDefault();
 
@@ -13,7 +14,7 @@ const Navigation = () => {
         <nav id="main-header__nav" className="responsive">
             <ul id="main-header__nav__items">
                 {
-                    data.headerListElements.map((hle) => (
+                    params.data.headerListElements.map((hle) => (
                         <li>
                             <a href={hle.href}>
                                 {hle.text}
