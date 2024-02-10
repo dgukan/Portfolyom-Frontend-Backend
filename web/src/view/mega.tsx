@@ -25,7 +25,7 @@ const About = (props: {s: SectionModel}) => {
             {/* __section -> __article */}
                 <article className={`${sectionKey}__article`}>
                     <header className='article__header'>
-                        <h3 className='header__text'>
+                        <h3 className='h__text'>
                             {props.s.header}
                         </h3>
                     </header>

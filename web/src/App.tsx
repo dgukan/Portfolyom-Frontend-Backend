@@ -198,16 +198,19 @@ function App() {
                      class isimleri kullanmadan erisimdeki sikinitlari ortadan kaldirir
                      class namesiz kod sadelesir css kisalir
                      */}
-                    <main id="main-div">
-                        <article id="main-article">
-                            <header id="main-article__section">
+                     {/* #main-div ->  */}
+                    <main className='content'>
+                        {/* #main-article -> */}
+                        <article className='content__article'>
+                            {/* #main-article__section -> */}
+                            <header className='article__header'>
                                 <div role='presentation' className="bg">
                                     <img src="me-photo.png" alt="cv-fotoğrafı" className="img__element"/>
                                 </div>
-                                <article className="hero-text">
+                                <body className="hero-text">
                                     <h1>{body.header}</h1>
                                     <p>{body.text}</p>
-                                </article>
+                                </body>
                             </header>
                             <Sections model={sections}/>  
                         </article>
