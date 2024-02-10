@@ -5,6 +5,7 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { useEffect, useState } from "react";
 
 const Navigation = (params: { data: ComponentData }) => {
+    // useeffect yada state neden gerekti anlamadigini sor
     const [internalNavigation, setInternalNavigation] = useState<NavigationModel[]>([]);
     const [externalNavigation, setExternalNavigation] = useState<NavigationModel[]>([]);
     
@@ -12,14 +13,13 @@ const Navigation = (params: { data: ComponentData }) => {
         const internalNavigation: NavigationModel[] = [];
         const externalNavigation: NavigationModel[] = [];
 
+        // ... yi bana sor
         params.data.nav.forEach((n) => (
             (n.icon == null) 
             ? setInternalNavigation([...internalNavigation, n]) 
             : setExternalNavigation([...externalNavigation, n])
         ));            
     },[params.data.nav]);
-
-   
 
     return <>
         <nav className="responsive">

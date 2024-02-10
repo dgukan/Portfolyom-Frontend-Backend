@@ -1,35 +1,13 @@
 import "./App.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import Navigation from "./Navigation";
-import Content from "./model/content";
-import ComponentData, { Section } from "./model/componentData";
+import { Section } from "./model/componentData";
 import Data from "./data";
 import { About, Cv, Education, Footer, Experience } from "./view/section";
 import { Header } from "./view/section/header";
-// 1- App basladigi an, bir method calistir
-// 1a React'tan UseEffect'i importla, App'in icine Return'un uzerinde kullan
-// (React Component  lifecycle nedir)?
-//      UseEffect bir component'in mount, update, unmount gibi lifecycle'larinda calisan bir methoddur
-// 2- Calisan method ile, backend'e bir GET request yap
-// 2a- fetch'i kullan. Fetch'e backend'in url'ini ver
-// 2b- fetch'in icine, method olarak GET'i belirt
-// 2c - fetch'in icine, headers olarak content-type: application/json'i belirt
-// 2d- fetch'in icine, body olarak null'i belirt
-// 2e- fetch'in sonucunu, response olarak al
-// 2f- response'u printle, backenddeki veriyi burda goVrebildigin zaman tamamdir
-// 3- Gelen response'u, state'e at
-//  3a- useState'i importla
-//  3b- useState'i kullanarak, state'teki objenin seklini ve ilk varsayilan degerini belirt
-//  3c- usestate'in set methodunu kullanarak, state'i guncelle
 
-// 4- component'teki content'i artik state'ten al
-//  4a- Component'teki eski verinin geldigi noktayi yorumlara al
-//  4b- O artik yorumda olan ve hata veren seyleri, state'ten kullanacak sekilde degistir
-//  4c- Calistir ve ekrana bak, her verinin eskisi gibi gozukmesi ama backend'den gelmesi lazim
 
 function App() {
-	//statik class'tan erisim ornegi
 	const data = Data.Component;
 	const { content } = data;
 	const { sections } = content;
@@ -69,6 +47,26 @@ const Sections = (props: { model: Section[] }) =>
   );
 
 
+// 1- App basladigi an, bir method calistir
+// 1a React'tan UseEffect'i importla, App'in icine Return'un uzerinde kullan
+// (React Component  lifecycle nedir)?
+//      UseEffect bir component'in mount, update, unmount gibi lifecycle'larinda calisan bir methoddur
+// 2- Calisan method ile, backend'e bir GET request yap
+// 2a- fetch'i kullan. Fetch'e backend'in url'ini ver
+// 2b- fetch'in icine, method olarak GET'i belirt
+// 2c - fetch'in icine, headers olarak content-type: application/json'i belirt
+// 2d- fetch'in icine, body olarak null'i belirt
+// 2e- fetch'in sonucunu, response olarak al
+// 2f- response'u printle, backenddeki veriyi burda goVrebildigin zaman tamamdir
+// 3- Gelen response'u, state'e at
+//  3a- useState'i importla
+//  3b- useState'i kullanarak, state'teki objenin seklini ve ilk varsayilan degerini belirt
+//  3c- usestate'in set methodunu kullanarak, state'i guncelle
+
+// 4- component'teki content'i artik state'ten al
+//  4a- Component'teki eski verinin geldigi noktayi yorumlara al
+//  4b- O artik yorumda olan ve hata veren seyleri, state'ten kullanacak sekilde degistir
+//  4c- Calistir ve ekrana bak, her verinin eskisi gibi gozukmesi ama backend'den gelmesi lazim
 
     // const [content, setContent] = useState<Content | null>(null);
 
