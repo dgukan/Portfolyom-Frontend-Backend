@@ -18,11 +18,11 @@ export interface Content {
 
 
 export interface Section {
-        name: 'about' | 'education' | 'project' | 'cv' | 'footer';
-        header?: string;
-        p?: string;
-        text?: string;
-        href?: string;
+    name: 'about' | 'education' | 'project' | 'cv' | 'footer';
+    header?: string;
+    p?: string;
+    text?: string;
+    href?: string;
 }
 
 export interface HeaderListElement {

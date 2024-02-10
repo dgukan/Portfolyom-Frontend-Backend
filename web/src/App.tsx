@@ -187,23 +187,31 @@ function App() {
                             </ul>
                         </footer>
                     </header>
-                    {/* TODO diger hersey gibi css ini duzelt gereksiz classlari sil */}
-                    {/* diger hersey gibi html ini duzelt mantikli isimler kullan div yerine */}
-                    {/* scss avantajlarini kullanarak classnamesiz bem guzellikleri yakalayacayik bu sayede */}
-                    <div id="main-div">
+                    {/* TODO: diger hersey gibi css ini duzelt, ben hierarsi olarak hallettim
+                    sen sadece girip # ile ulastigin seyleri once .ya sonrada direk html tagina
+                    donusturmen gerek. yukardaki diger yaptiklarimdan ornek al, sadece gerekli noktalarda
+                    classname ver.  */}
+                    {/* scss avantajlarini kullanarak class name leri her yere kullanmadan
+                     bem guzellikleri yakalayacayik
+                     ic ice yazabilmek, kurallarin sadece o elemente kullanilacagindan emin olur
+                     takibi kolaylastirir
+                     class isimleri kullanmadan erisimdeki sikinitlari ortadan kaldirir
+                     class namesiz kod sadelesir css kisalir
+                     */}
+                    <main id="main-div">
                         <article id="main-article">
-                            <section id="main-article__section">
-                                <div className="bg">
+                            <header id="main-article__section">
+                                <div role='presentation' className="bg">
                                     <img src="me-photo.png" alt="cv-fotoğrafı" className="img__element"/>
                                 </div>
-                                <div className="hero-text">
+                                <article className="hero-text">
                                     <h1>{body.header}</h1>
                                     <p>{body.text}</p>
-                                </div>
-                            </section>
+                                </article>
+                            </header>
                             <Sections model={sections}/>  
                         </article>
-                    </div>
+                    </main>
                 </main>
             </div>
         </body>
