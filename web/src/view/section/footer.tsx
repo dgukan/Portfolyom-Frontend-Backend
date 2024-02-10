@@ -1,19 +1,16 @@
-import { Section } from "../../model/componentData";
 import React from "react";
+import { Section } from "../../model/componentData";
 
 export const Footer = (props: {s: Section}) => {
-    const sectionKey = props.s.name;
-    return (
-        <>
-            <section className={sectionKey}>
-                <article>
-                    <main>
-                        <p>
-                            &copy; {props.s.text}
-                        </p>
-                    </main>
-                </article>
-            </section>
-        </>
-    );
+    return <>
+        <section className={props.s.name}>
+            <article>
+                <main>
+                    <p>
+                        &copy; {props.s.text}
+                    </p>
+                </main>
+            </article>
+        </section>
+    </>
 }

@@ -6,11 +6,12 @@ export default class Data {
    static Component: ComponentData = {
         content: {
             logo:"Dogukan Koc",
-            body:{
-                header:"DOGUKAN KOC",
-                text:"BT Öğrencisi",
-            },
             sections: [
+                {
+                    name: 'header',
+                    header:"DOGUKAN KOC",
+                    text: 'BT Öğrencisi'
+                },
                 {
                     name: 'about',
                     header:"HAKKIMDA",
@@ -23,7 +24,7 @@ export default class Data {
                     text:"2020-2024"
                 },
                 {
-                    name: 'project' ,
+                    name: 'experience' ,
                     header:"PROJELERİM",
                     href:"",
                 },
@@ -38,41 +39,36 @@ export default class Data {
                 },
             ]
         },
-        headerListElements: [
+        nav: [
             {
-                href: "#about", 
+                href: "about", 
                 text: "Hakkımda"
             },
             {
-                href: "#education", 
+                href: "education", 
                 text: "Eğitim"
             },
             {
-                href: "#project", 
+                href: "project", 
                 text: "Projelerim"
             },
             {
-                href: "#cv", 
+                href: "cv", 
                 text: "Özgeçmiş"
             },
-        ],
-        socialMediaIcons: [
             {
                 href:"https://www.linkedin.com/in/do%C4%9Fukan-ko%C3%A7-884758254/",
-                target:"linkedin",
-                icon: faLinkedin
+                icon : { target: 'linkedin', icon: faLinkedin }
             },
             {
                 href:"https://github.com/dgukan",
-                target:"git",
-                icon: faGithub
+                icon: { target: 'git', icon: faGithub }
             },
             {
                 href:"mailto:",
-                target:"mail",
-                icon: faEnvelope
+                icon: { target:"mail", icon: faEnvelope}
             }
-        ]
+        ],
     };        
 }
     
