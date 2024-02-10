@@ -2,10 +2,10 @@ import './App.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, {useEffect, useState} from 'react';
 import Navigation from './Navigation';
-import Body from './Body';
 import Content from './model/content'
-import  ComponentData  from './model/componentData';
+import  ComponentData, { Section }  from './model/componentData';
 import Data from './data';
+import { About, Cv, Education, Footer, Project } from './view/section';
 // 1- App basladigi an, bir method calistir
 // 1a React'tan UseEffect'i importla, App'in icine Return'un uzerinde kullan
 // (React Component  lifecycle nedir)?
@@ -160,22 +160,23 @@ function App() {
 
     //statik class'tan erisim ornegi
     const data = Data.Component;
-
+    const {content} = data;
+    const {body, sections} = content;
+    
     return (
-        <div className="App">
-            <div id="top">
-                <main id="main">
-                    <header id="main-header">
+        <body className="app">
+            <div role='presentation' className="app__main"  id="top">
+                <main className="target">
+                    <header>
                         <a href="#top" id="logo">
                             <h3>
                                 {data.content.logo}
                             </h3>
                         </a>
                         <Navigation data={data}/>
-                        <footer id="main-header__footer">
-                            <ul id="main-header__footer_ul">
-                                {
-                                    data.socialMediaIcons.map((socialMediaIcon) => (
+                        <footer>
+                            <ul>
+                                {data.socialMediaIcons.map((socialMediaIcon) => (
                                         <li>
                                             <a href={socialMediaIcon.href} target={socialMediaIcon.target}>
                                                 <FontAwesomeIcon icon={socialMediaIcon.icon}/>
@@ -186,11 +187,37 @@ function App() {
                             </ul>
                         </footer>
                     </header>
-                   <Body data={data}/>
+                    {/* TODO diger hersey gibi css ini duzelt gereksiz classlari sil */}
+                    {/* diger hersey gibi html ini duzelt mantikli isimler kullan div yerine */}
+                    {/* scss avantajlarini kullanarak classnamesiz bem guzellikleri yakalayacayik bu sayede */}
+                    <div id="main-div">
+                        <article id="main-article">
+                            <section id="main-article__section">
+                                <div className="bg">
+                                    <img src="me-photo.png" alt="cv-fotoğrafı" className="img__element"/>
+                                </div>
+                                <div className="hero-text">
+                                    <h1>{body.header}</h1>
+                                    <p>{body.text}</p>
+                                </div>
+                            </section>
+                            <Sections model={sections}/>  
+                        </article>
+                    </div>
                 </main>
             </div>
-        </div>
+        </body>
     );
 };
 export default App;
 
+
+const Sections = (props:{model: Section[]}) => props.model.map(s => ({
+        about:     <About s={s}/>,
+        project:   <Project s={s} />,
+        cv:        <Cv s={s}/>,
+        footer:    <Footer s={s}/>,
+        education: <Education s={s}/>,
+    }[s.name]
+    )
+)

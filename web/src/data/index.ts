@@ -10,7 +10,7 @@ export default class Data {
                 header:"DOGUKAN KOC",
                 text:"BT Öğrencisi",
             },
-            section: [
+            sections: [
                 {
                     name: 'about',
                     header:"HAKKIMDA",

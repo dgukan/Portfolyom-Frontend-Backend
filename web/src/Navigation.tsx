@@ -5,16 +5,15 @@ const Navigation = (params: {data: ComponentData}) => {
     function openMenu(event: React.MouseEvent<HTMLAnchorElement>): void {
         event.preventDefault();
 
-        const link = document.getElementById("main-header__nav");
+        const link = document.getElementById("header__nav");
         if (link)
           link.classList.toggle("responsive");
     };
 
     return (
-        <nav id="main-header__nav" className="responsive">
-            <ul id="main-header__nav__items">
-                {
-                    params.data.headerListElements.map((hle) => (
+        <nav className="header__nav responsive">
+            <ul>
+                {params.data.headerListElements.map((hle) => (
                         <li>
                             <a href={hle.href}>
                                 {hle.text}

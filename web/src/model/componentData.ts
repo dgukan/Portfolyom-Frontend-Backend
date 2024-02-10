@@ -12,13 +12,13 @@ export interface Content {
         header: string;
         text: string;
     };
-    section: Section[]
+    sections: Section[]
     
     };
 
 
 export interface Section {
-        name: string;
+        name: 'about' | 'education' | 'project' | 'cv' | 'footer';
         header?: string;
         p?: string;
         text?: string;
