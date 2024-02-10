@@ -6,9 +6,7 @@ export const Footer = (props: {s: Section}) => {
         <section className={props.s.name}>
             <article>
                 <main>
-                    <p>
-                        &copy; {props.s.text}
-                    </p>
+                    <p> &copy; {props.s.text} </p>
                 </main>
             </article>
         </section>

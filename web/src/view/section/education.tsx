@@ -6,23 +6,15 @@ export const Education = (props: {s: Section}) => {
         <section className={props.s.name} id={`${props.s.name}`}>
             <article>
                 <header>
-                    <h3>
-                        {props.s.header}
-                    </h3>
+                    <h3> {props.s.header} </h3>
                 </header>
                 <main>
                     <figure role='img'>
-                        <img src="egeüni.png" 
-                                alt="Ege üniversitesi logo"
-                        />
+                        <img src="egeüni.png" alt="Ege üniversitesi logo"/>
                     </figure>
                     <aside role='presentation'>
-                        <strong>
-                            {props.s.p}
-                        </strong>
-                        <p>
-                            {props.s.text}
-                        </p>
+                        <strong> {props.s.p} </strong>
+                        <p>  {props.s.text} </p>
                     </aside>
                 </main>
             </article>

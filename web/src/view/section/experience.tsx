@@ -6,9 +6,7 @@ export const Experience = (props: {s: Section}) => {
         <section className={`${props.s.name}`} id={`${props.s.name}`}>
             <article>
                 <header>
-                    <h3 >
-                        {props.s.header}
-                    </h3>
+                    <h3> {props.s.header} </h3>
                 </header>
                 <main>
                     <a href={props.s.href}>
