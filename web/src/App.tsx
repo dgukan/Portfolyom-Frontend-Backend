@@ -1,10 +1,11 @@
 import "./App.scss";
 // import { useEffect, useState } from "react";
 import Navigation from "./Navigation";
-import { Section } from "./model/componentData";
+import { Section as SectionModel } from "./model/componentData";
 import Data from "./data";
 import { About, Cv, Education, Footer, Experience } from "./view/section";
 import { Header } from "./view/section/header";
+import { Section } from "./view/section/section";
 
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
 }
 export default App;
 
-const Sections = (props: { model: Section[] }) =>
+const Sections = (props: { model: SectionModel[] }) =>
   props.model.map(
 	(s) => ({
 		header: 	<Header s={s}/>,
@@ -43,9 +44,12 @@ const Sections = (props: { model: Section[] }) =>
 		experience: <Experience s={s} />,
 		cv: 		<Cv s={s} />,
 		footer: 	<Footer s={s} />,
+		// gecici olarak
+		generic: 	<Section s ={s}/>,
 	  }[s.name])
   );
 
+  
 
 // 1- App basladigi an, bir method calistir
 // 1a React'tan UseEffect'i importla, App'in icine Return'un uzerinde kullan

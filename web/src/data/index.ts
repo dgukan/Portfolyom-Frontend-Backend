@@ -10,7 +10,8 @@ export default class Data {
                 {
                     name: 'header',
                     header:"DOGUKAN KOC",
-                    text: 'BT Öğrencisi'
+                    text: 'BT Öğrencisi',
+                    image: {source: 'me-photo.png', alternative: 'cv-fotoğrafı' }
                 },
                 {
                     name: 'about',
@@ -21,17 +22,20 @@ export default class Data {
                     name: 'education',
                     header:"EĞİTİM",
                     p:"Bilgisayar ve Öğretim Teknolojileri Eğitimi",
-                    text:"2020-2024"
+                    text:"2020-2024",
+                    image: { source: 'egeüni.png', alternative: 'Ege üniversitesi logo' }
                 },
                 {
                     name: 'experience' ,
                     header:"PROJELERİM",
                     href:"",
+                    image: { source: "html5-css3.png", alternative: "html5-css3 logo", title: "Github'a git" }
                 },
                 {
                     name: 'cv',
                     header:"ÖZGEÇMİŞ",
-                    href:"resume.pdf"
+                    href:"resume.pdf",
+                    image: { source:"vector-users-icon.png", alternative:"users icon", title:"resume.pdf" }
                 },
                 {
                     name: 'footer',

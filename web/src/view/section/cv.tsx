@@ -8,7 +8,12 @@ export const Cv = (props:{ s: Section }) => {
                 <main>
                     <h3> {props.s.header} </h3>
                     <a href={props.s.href} target="_blank" rel="noreferrer">
-                        <img src="vector-users-icon.png" alt="users icon" title="resume.pdf"/>
+                        {props.s.image && <>
+                            <img src={props.s.image.source} 
+                                 alt={props.s.image.alternative}
+                                 title={props.s.image.title}
+                            />
+                        </>}
                     </a>
                 </main>                    
             </article>

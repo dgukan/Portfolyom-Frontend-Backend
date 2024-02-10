@@ -17,6 +17,7 @@ export interface Section {
     p?: string;
     text?: string;
     href?: string;
+    image?: { source:string; alternative:string, title?: string };
 }
 
 export interface Navigation {

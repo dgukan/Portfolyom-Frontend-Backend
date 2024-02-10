@@ -9,9 +9,14 @@ export const Education = (props: {s: Section}) => {
                     <h3> {props.s.header} </h3>
                 </header>
                 <main>
-                    <figure role='img'>
-                        <img src="egeüni.png" alt="Ege üniversitesi logo"/>
-                    </figure>
+                    {props.s.image && <>
+                        <figure role='img'>
+                            <img src={props.s.image.source} 
+                                 alt={props.s.image.alternative}
+                                 title={props.s.image.title}
+                            />
+                        </figure>
+                    </>}
                     <aside role='presentation'>
                         <strong> {props.s.p} </strong>
                         <p>  {props.s.text} </p>

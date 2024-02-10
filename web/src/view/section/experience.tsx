@@ -10,7 +10,12 @@ export const Experience = (props: {s: Section}) => {
                 </header>
                 <main>
                     <a href={props.s.href}>
-                        <img src="html5-css3.png" alt="html5-css3 logo"title="Github'a git" />
+                        { props.s.image && <>
+                            <img src={props.s.image.source} 
+                                 alt={props.s.image.alternative}
+                                 title={props.s.image.title} 
+                            />
+                        </>}
                     </a>
                 </main>
             </article>
