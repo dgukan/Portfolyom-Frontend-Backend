@@ -12,14 +12,14 @@ export const Project = (props: {s: Section}) => {
                             {props.s.header}
                         </h3>
                     </header>
-                    <body>
+                    <main>
                         <a href={props.s.href}>
                             <img src="html5-css3.png"                                 
                                  alt="html5-css3 logo" 
                                  title="Github'a git" 
                             />
                         </a>
-                    </body>
+                    </main>
                 </article>
             </section>
         </>

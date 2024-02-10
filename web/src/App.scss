@@ -5,9 +5,9 @@ html{
   	
 	body.app {
 		text-align: center;
-		.app__main {
+		main {
 
-			main.target {
+			article {
 				display: flex;
 				height: 100%;
 
@@ -114,7 +114,7 @@ html{
 							height: 100vh;
 							z-index: 1;
 
-							.header__image	{
+							figure	{
 								text-align: center;
 
 								img {
@@ -170,7 +170,7 @@ html{
 										color: #fff;
 									}
 								}
-								body {
+								main {
 									p {
 										padding: 0.4rem;
 										font-family: 'Open Sans', sans-serif;
@@ -207,8 +207,8 @@ html{
 									}
 								}
 
-								body {
-									.body__image {
+								main {
+									figure {
 										text-align: center;
 
 										img {
@@ -219,8 +219,7 @@ html{
 										}
 									}
 
-									.body__present {
-
+									aside {
 										strong {
 											font-family: "small-caps";
 										}
@@ -265,7 +264,7 @@ html{
 									}
 								}
 
-								body {
+								main {
 									a {
 										image {
 											width: 20rem;
@@ -292,7 +291,7 @@ html{
 							article {
 								margin-top: 3rem;
 
-								body {
+								main {
 
 									h3 {
 										font-family: 'Open Sans', sans-serif;
@@ -328,7 +327,7 @@ html{
 							background: rgba( 0, 28, 64, 0.7 );
 
 							article {
-								body {
+								main {
 									p {
 										padding: 0.4rem;
 										font-family: 'Open Sans', sans-serif;

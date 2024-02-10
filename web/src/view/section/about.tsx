@@ -16,11 +16,11 @@ export const About = (props: {s: Section}) => {
                             {props.s.header}
                         </h3>
                     </header>
-                    <body>
+                    <main>
                         <p>
                             {props.s.p}
                         </p>
-                    </body>
+                    </main>
                 </article>
             </section>
         </>

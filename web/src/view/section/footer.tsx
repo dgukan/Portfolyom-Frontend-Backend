@@ -7,11 +7,11 @@ export const Footer = (props: {s: Section}) => {
         <>
             <section className={sectionKey}>
                 <article>
-                    <body>
+                    <main>
                         <p>
                             &copy; {props.s.text}
                         </p>
-                    </body>
+                    </main>
                 </article>
             </section>
         </>

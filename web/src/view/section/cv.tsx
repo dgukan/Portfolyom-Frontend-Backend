@@ -7,7 +7,7 @@ export const Cv = (props:{ s: Section }) => {
         <>
             <section className={sectionKey} id={`${sectionKey}`}>
                 <article>
-                    <body>
+                    <main>
                         <h3>
                             {props.s.header}
                         </h3>
@@ -20,7 +20,7 @@ export const Cv = (props:{ s: Section }) => {
                                 title="resume.pdf"
                             />
                         </a>
-                    </body>                    
+                    </main>                    
                 </article>
             </section>
         </>

@@ -165,8 +165,9 @@ function App() {
     
     return (
         <body className="app">
-            <div role='presentation' className="app__main"  id="top">
-                <main className="target">
+            <main id="top">
+                {/* 1.article */}
+                <article>
                     <header>
                         <a href="#top" id="logo">
                             <h3>
@@ -187,27 +188,14 @@ function App() {
                             </ul>
                         </footer>
                     </header>
-                    {/* TODO: diger hersey gibi css ini duzelt, ben hierarsi olarak hallettim
-                    sen sadece girip # ile ulastigin seyleri once .ya sonrada direk html tagina
-                    donusturmen gerek. yukardaki diger yaptiklarimdan ornek al, sadece gerekli noktalarda
-                    classname ver.  */}
-                    {/* scss avantajlarini kullanarak class name leri her yere kullanmadan
-                     bem guzellikleri yakalayacayik
-                     ic ice yazabilmek, kurallarin sadece o elemente kullanilacagindan emin olur
-                     takibi kolaylastirir
-                     class isimleri kullanmadan erisimdeki sikinitlari ortadan kaldirir
-                     class namesiz kod sadelesir css kisalir
-                     */}
-                     {/* #main-div ->  */}
                     <main className='content'>
-                        {/* #main-article -> */}
+                        {/* 2.article */}
                         <article className='content__article'>
-                            {/* #main-article__section -> */}
                             <header className='article__header'>
-                                <div role='presentation' className="header__image">
-                                    <img src="me-photo.png" alt="cv-fotoğrafı" className="image__element"/>
-                                </div>
-                                <article className="hero-text">
+                                <figure role='presentation'>
+                                    <img src="me-photo.png" alt="cv-fotoğrafı"/>
+                                </figure>
+                                <article>
                                     <h1>{body.header}</h1>
                                     <p>{body.text}</p>
                                 </article>
@@ -215,8 +203,8 @@ function App() {
                             <Sections model={sections}/>  
                         </article>
                     </main>
-                </main>
-            </div>
+                </article>
+            </main>
         </body>
     );
 };
