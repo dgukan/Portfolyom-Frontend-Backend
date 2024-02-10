@@ -5,8 +5,6 @@ html{
   	
 	body.app {
 		text-align: center;
-		// & sass ta parent elementi temsil eder, bu durumda .app elementini temsil eder
-		// sass ta bir element icine baska elementler eklenebilir 
 		.app__main {
 
 			main.target {
@@ -16,7 +14,6 @@ html{
 				header {
 					position: fixed;
 					z-index: 2;
-					/* flex: 25%; */
 					background-color: #001c40;
 					color: #fff;
 					height: 100vh;
@@ -25,7 +22,6 @@ html{
 					justify-content: space-between;
 					flex-direction: column;
 					
-					// #logodan tasindi
 					a {
 						font-size: 3.5rem;
 						font-family: 'Open Sans', sans-serif;
@@ -78,12 +74,8 @@ html{
 							}  
 						}
 					}
-				}
-					
-
-				// TODO:: classname yerine yukardakiler gibi yap, html isimlerini ben HTML5 e degistirdim zaten
-					
-				main.content{
+				}					
+				main.content {
 					flex: 80%;
 					background-image: url('../public/bg5.jpg');
 					background-repeat: no-repeat;
@@ -95,7 +87,7 @@ html{
 					justify-content: center;
 					margin-left: 24.5rem;
 
-					.content__article {
+					article {
 						&::before {
 							content: "";
 							position: fixed;
@@ -114,7 +106,7 @@ html{
 						color: #fff;
 						position: relative;
 
-						.article__header{
+						header {
 							display: flex;
 							flex-direction: column;
 							align-items: center;
@@ -122,17 +114,17 @@ html{
 							height: 100vh;
 							z-index: 1;
 
-							.bg	{
+							.header__image	{
 								text-align: center;
 
-								.img__element{
+								img {
 									border: 0.5rem solid rgba(255, 255, 255, 0.5);
 									border-radius: 100%;
 									width: auto;
 									height: 20rem;
 								}
 							}
-							.hero-text {
+							article {
 								h1 {
 									font-size: 3.5rem;
 									font-family: 'Open Sans', sans-serif;
@@ -151,7 +143,8 @@ html{
 								}					
 							}
 						}
-						.about {
+
+						section.about {
 							width: 60%;
 							height: fit-content;
 							padding: 5rem;
@@ -163,11 +156,11 @@ html{
 							backdrop-filter: blur( 0.3rem );
 							border-radius: 1rem;
 
-							.about__article{
+							article {
 								margin-top: 3rem;
 
-								.article__header {
-									.h__text {
+								header {
+									h3 {
 										font-family: 'Open Sans', sans-serif;
 										font-variant: small-caps;
 										font-size: 3.2rem;
@@ -177,8 +170,8 @@ html{
 										color: #fff;
 									}
 								}
-								.about__body {
-									.p__text {
+								body {
+									p {
 										padding: 0.4rem;
 										font-family: 'Open Sans', sans-serif;
 										font-size: 1.6rem;
@@ -187,8 +180,7 @@ html{
 								}
 							}
 						}
-
-						.education {
+						section.education {
 							width: 60%;
 							height: fit-content;
 							padding: 5rem;
@@ -200,11 +192,11 @@ html{
 							backdrop-filter: blur( 0.3rem );
 							border-radius: 1rem;
 
-							.education__article{
+							article {
 								margin-top: 3rem;
 
-								.article__header {
-									.h__text {
+								header {
+									h3 {
 										font-family: 'Open Sans', sans-serif;
 										font-variant: small-caps;
 										font-size: 3.2rem;
@@ -215,11 +207,11 @@ html{
 									}
 								}
 
-								.article__body {
-									.body__img, .bg {
+								body {
+									.body__image {
 										text-align: center;
 
-										.img__element  {
+										img {
 											border: 0.5rem solid rgba(255, 255, 255, 0.5);
 											border-radius: 100%;
 											width: auto;
@@ -227,7 +219,11 @@ html{
 										}
 									}
 
-									.body__presentation{
+									.body__present {
+
+										strong {
+											font-family: "small-caps";
+										}
 										p {
 											font-size: 1.8rem;
 											font-family: 'Open Sans', sans-serif;
@@ -239,8 +235,7 @@ html{
 								}
 							}
 						}
-
-						.project{
+						section.project {
 							width: 60%;
 							height: fit-content;
 							padding: 5rem;
@@ -255,11 +250,11 @@ html{
 							padding: 1.6rem;
 							margin: 1.6rem;
 
-							.project__section{
+							article {
 								margin-top: 3rem;
 
-								.article__header{
-									.h__text{
+								header {
+									h3 {
 										font-family: 'Open Sans', sans-serif;
 										font-variant: small-caps;
 										font-size: 3.2rem;
@@ -270,9 +265,9 @@ html{
 									}
 								}
 
-								.article__body{
-									a{
-										.anchor__image{
+								body {
+									a {
+										image {
 											width: 20rem;
 											height: 20rem;
 										}
@@ -282,7 +277,7 @@ html{
 							}
 						}
 
-						.cv{
+						section.cv {
 							width: 60%;
 							height: fit-content;
 							padding: 5rem;
@@ -294,12 +289,12 @@ html{
 							backdrop-filter: blur( 0.3rem );
 							border-radius: 1rem;
 
-							.cv__article{
+							article {
 								margin-top: 3rem;
 
-								.article__body{
+								body {
 
-									.h__text{
+									h3 {
 										font-family: 'Open Sans', sans-serif;
 										font-variant: small-caps;
 										font-size: 3.2rem;
@@ -308,8 +303,8 @@ html{
 										padding-bottom: 4rem;
 										color: #fff;
 									}
-									a{
-										.anchor__image{
+									a {
+										img {
 											width: 20rem;
 											height: 20rem;
 										}
@@ -318,7 +313,7 @@ html{
 							}
 						}
 
-						.footer {
+						section.footer {
 							font-size: 1.8rem;
 							border-top: 0.1rem solid #fff;
 							display: block;
@@ -332,9 +327,9 @@ html{
 							margin-top: 30vh;
 							background: rgba( 0, 28, 64, 0.7 );
 
-							.footer__article{
-								.article__body{
-									.p__text{
+							article {
+								body {
+									p {
 										padding: 0.4rem;
 										font-family: 'Open Sans', sans-serif;
 										font-size: 1.6rem;
@@ -343,222 +338,9 @@ html{
 								}
 							}
 						}
-
-					}
-						
+					}	
 				}
-
 			}
 		}
 	}
-		
 }
-
-
-
-
-
-
-
-			// .content{
-					
-
-					// .content__article {
-						
-					
-
-					// 	.article__header {
-							
-
-					// 		.bg{
-					// 			text-align: center;
-
-					// 			.img__element{
-									
-					// 			  }
-					// 		  }
-							    
-					// 		.hero-text{
-								 
-											
-					// 		}
-					// 	  }
-												  
-					// 	.about, .education, .project, .cv{
-					// 		width: 60%;
-					// 		height: fit-content;
-					// 		padding: 5rem;
-					// 		margin: 1.6rem;
-					// 		text-align: center;
-					// 		z-index: 1;
-					// 		background: rgba( 0, 28, 64, 0.4 );
-					// 		box-shadow: 0 -0.5rem 0.8rem #7e7e7e, 0 0.5rem 1rem #8b8b8b;
-					// 		backdrop-filter: blur( 0.3rem );
-					// 		border-radius: 1rem;
-					// 	}
-						
-					// 	.p__text{
-					// 		padding: 0.4rem;
-					// 		font-family: 'Open Sans', sans-serif;
-					// 		font-size: 1.6rem;
-					// 		color: #fff;
-					// 	}
-						
-					// 	.h__text{
-					// 		font-family: 'Open Sans', sans-serif;
-					// 		font-variant: small-caps;
-					// 		font-size: 3.2rem;
-					// 		letter-spacing: 0.1rem;
-					// 		text-transform: uppercase;
-					// 		padding-bottom: 4rem;
-					// 		color: #fff;
-					// 	}
-						
-					// 	.about__article, .education__article, .project__article{
-					// 		margin-top: 3rem;
-					// 	}
-						
-					// 	.education{
-					// 		display: flex;
-					// 		flex-direction: row;
-					// 		justify-content: center;
-					// 		align-items: center;
-					// 	}
-						
-					// 	.anchor__image{
-					// 		width: 20rem;
-					// 		height: 20rem;
-					// 	}
-						
-					// 	.project{
-					// 		padding: 1.6rem;
-					// 		margin: 1.6rem;
-					// 	}
-						
-					// 	// .anchor__image{
-					// 	//   width: 20rem;
-					// 	//   height: 20rem;
-					// 	// }
-						
-					// 	.footer{
-							
-					// 	}
-  
-					//   }
-/* 1024px */
-// @media screen and (max-width: 1024px){
-//   html{
-//       font-size: 9px;
-//   }
-
-//   #main-header{
-//       width: 25%;
-//   }
-// } 
-
-// /* tablet */
-// @media screen and (max-width:992px){
-//   #main-header{
-//       width: 27%;
-//   }
-
-//   #main-header__footer{
-//       margin-bottom: 3rem;
-      
-//   }
-
-//   #main-div{
-//       width: 73%;
-//       margin-left: 26.2rem;
-//   }
-// }
-
-// /* cep telefonu */
-// @media screen and (min-width: 320px) and (max-width: 767px){
-//   html{
-//       font-size: 7px;
-//   }
-
-//   #main-header{
-//       height: 20vh;
-//       width: 100%;
-//       flex-direction: row;
-//       /* position: absolute; */
-//       top: 0;
-//   }
-
-//   #main-header__nav{
-//       display: flex;
-//       border-top: none;
-//       width: 100%;
-//       align-items: center;
-//       justify-content: center;
-//       padding: 0;
-//       margin-top: 3rem;
-//   }
-
-//   #logo{
-//       display: flex;
-//       align-items: center;
-//       justify-content: center;
-//   }
-
-//   #main-header__nav__items{
-//       background: rgba( 0, 28, 64, 0.4 );
-//       width: 100%;
-//   }
-
-//   #main-header__nav__items li a{
-//       text-align: center;
-//       width: 100%;
-//   }
-
-//   #main-header__nav__items li:last-child{
-//       display: block;
-//       position: absolute;
-//       right: 0;
-//       top: 60%;
-//   }
-
-//   .responsive li:not(:last-child){
-//       display: none;
-//   }
-
-//   #main-header__footer{
-//       position: absolute;
-//       top: 20px;
-//       height: 10vh;
-//       font-size: 2.5rem;  
-//   }
-
-//   #main-header__footer ul{
-//       flex-direction: column;
-//   }
-
-//   #main-header__footer ul li{
-//       padding: 0.5rem;
-//   }
-
-//   #main-div{
-//       margin-left: 0;
-//   }
-
-//   .p__text{
-//       padding: 0.9rem;
-//   }
-  
-//   .h__text{
-
-//       padding-top: 5.5rem;
-//   }
-
-//   #main-article::before{
-//       width: 100%;
-//   }
-
-//   #article-footer p{
-//       padding: 1rem 0.5rem;
-//   }
-
-
-// }

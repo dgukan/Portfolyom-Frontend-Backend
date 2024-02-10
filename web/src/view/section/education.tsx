@@ -6,17 +6,14 @@ export const Education = (props: {s: Section}) => {
     return (
         <>
             <section className={sectionKey} id={`${sectionKey}`}>
-                {/* __section -> __article */}
-                <article className={`${sectionKey}__article`}>
-                    {/* education__section__header -> article__header */}
-                    <header className='article__header'>
-                        <h3 className='h__text'>
+                <article>
+                    <header>
+                        <h3>
                             {props.s.header}
                         </h3>
                     </header>
-                    <body className="article__body">
-                        {/* education__section__header__supplement */}
-                        <div role='img' className='body__img bg'>
+                    <body>
+                        <div role='img' className='body__image'>
                             <img src="egeüni.png" 
                                 // hero-photo -> 
                                  className='img__element'
@@ -24,11 +21,11 @@ export const Education = (props: {s: Section}) => {
                             />
                         </div>
                         {/* education__section__paragraph hero-text ->  */}
-                        <div role='presentation' className="body__presentation hero-text">
-                            <p className='presentation__head-text' style={{fontFamily:"small-caps"}}>
+                        <div role='presentation' className="body__present">
+                            <strong>
                                 {props.s.p}
-                            </p>
-                            <p className="p__text">
+                            </strong>
+                            <p>
                                 {props.s.text}
                             </p>
                         </div>

@@ -10,16 +10,14 @@ export const About = (props: {s: Section}) => {
     return (
         <>
             <section className={sectionKey} id={`${sectionKey}`}> 
-            {/* __section -> __article */}
-                <article className={`${sectionKey}__article`}>
-                    <header className='article__header'>
-                        <h3 className='h__text'>
+                <article>
+                    <header>
+                        <h3>
                             {props.s.header}
                         </h3>
                     </header>
-                    {/* section__header-supplement -> __body */}
-                    <body className={`${sectionKey}__body`}>
-                        <p className='p__text'>
+                    <body>
+                        <p>
                             {props.s.p}
                         </p>
                     </body>

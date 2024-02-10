@@ -204,13 +204,13 @@ function App() {
                         <article className='content__article'>
                             {/* #main-article__section -> */}
                             <header className='article__header'>
-                                <div role='presentation' className="bg">
-                                    <img src="me-photo.png" alt="cv-fotoğrafı" className="img__element"/>
+                                <div role='presentation' className="header__image">
+                                    <img src="me-photo.png" alt="cv-fotoğrafı" className="image__element"/>
                                 </div>
-                                <body className="hero-text">
+                                <article className="hero-text">
                                     <h1>{body.header}</h1>
                                     <p>{body.text}</p>
-                                </body>
+                                </article>
                             </header>
                             <Sections model={sections}/>  
                         </article>
@@ -223,12 +223,12 @@ function App() {
 export default App;
 
 
-const Sections = (props:{model: Section[]}) => props.model.map(s => ({
+const Sections = (props:{ model: Section[] }) => props.model.map(s => ({
         about:     <About s={s}/>,
+        education: <Education s={s}/>,
         project:   <Project s={s} />,
         cv:        <Cv s={s}/>,
         footer:    <Footer s={s}/>,
-        education: <Education s={s}/>,
     }[s.name]
     )
 )
