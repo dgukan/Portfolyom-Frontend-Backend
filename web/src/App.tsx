@@ -44,8 +44,6 @@ const Sections = (props: { model: SectionModel[] }) =>
 		experience: <Experience s={s} />,
 		cv: 		<Cv s={s} />,
 		footer: 	<Footer s={s} />,
-		// gecici olarak
-		// generic: 	<Section s ={s}/>,
 	  }[s.name])
   );
 
