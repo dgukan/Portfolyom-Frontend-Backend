@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 html{
+
 	font-size: 10px;
   	
 	body.app {
@@ -12,7 +13,9 @@ html{
 				display: flex;
 				height: 100%;
 
-				header {
+				// class vermedigimiz icin bu seviyedeki tum headerlara bu kurallari uyguladi
+				// header {
+				header.article__header {
 					position: fixed;
 					z-index: 2;
 					background-color: #001c40;
@@ -23,7 +26,7 @@ html{
 					justify-content: space-between;
 					flex-direction: column;
 					
-					a {
+					a#logo {
 						font-size: 3.5rem;
 						font-family: 'Open Sans', sans-serif;
 						font-variant: small-caps;
@@ -59,7 +62,7 @@ html{
 
 							li {
 								&:last-child {
-									display: none;
+									// display: none;
 
 									a {
 										&:hover { border-bottom: none; }
@@ -80,7 +83,7 @@ html{
 					}
 				}			
 
-				main.content {
+				main.article__main {
 					flex: 80%;
 					background-image: url('../public/bg5.jpg');
 					background-repeat: no-repeat;
@@ -90,28 +93,47 @@ html{
 					flex-direction: row;
 					align-content: center;
 					justify-content: center;
-					margin-left: 24.5rem;
+					// hile ile sagdaki containerin icindekileri saga ittin
+					// margin-left: 24.5rem;
 
 					article {
+						all:unset;
 						display: flex;
-						width: 100%;
+						// 
+						// soldaki absolute oldugu icin flex ile duzenlenemez
+						// sagdakine 20% margin yada left: gibi birsey vermen gerekiyor
+						// verince ust uste gelmezler 
+						width: 60%;
+						margin-left: 20%;
+						// 
 						flex-direction: column;
 						justify-content: center;
 						align-items: center;
-						z-index: 1;
+						// hile ile soldaki bari footer'in hep uzerinde kalmasini sagladin
+						// z-index: 1;
 						color: #fff;
 						position: relative;
 
-						&::before {
-							content: "";
-							position: fixed;
+						// class belirtmedik hepsine ekledi tum article lara
+						// &::before {
+						&.main::before {
+							content: '';
+							position: absolute;
 							top: 0;
-							right: 0;
-							width: 80%;
+							left: 0;
+							width: 140%;
+							margin-left: -20%;
 							height: 100%;
-							background-color: rgba(0, 0, 0, 0.6);
+							background-color: rgba(0, 0, 0, 0.3);
+							z-index: 1;
 						}
 
+						// fix tum sectionlardaki article i resetle ki hersey ortalansin
+						section {
+							article{ 
+								margin: 0;
+							}
+						}
 						section.header {
 							display: flex;
 							flex-direction: column;
@@ -132,7 +154,6 @@ html{
 							}
 
 							article {
-
 								h1 {
 									font-size: 3.5rem;
 									font-family: 'Open Sans', sans-serif;
@@ -333,9 +354,10 @@ html{
 						}
 
 						section.footer {
+
 							font-size: 1.8rem;
 							border-top: 0.1rem solid #fff;
-							display: block;
+							// display: block;
 							width: 100%;
 							text-align: center;
 							position: relative;
@@ -343,11 +365,18 @@ html{
 							z-index: 2;
 							color: #fff;
 							padding: 3rem;
-							margin-top: 30vh;
+							//footer yazilarini hilesiz ortala
+							display:flex;
+							justify-content: center;
+							// 
+							// hileli olarak footer ve ustundeki elementin son icerikleri arasina bosluk attin
+							// bunu padding olarak o arraydeki son elemente vermen gerek
+							// anahtarlarin siralari degisse bile bunu hep sonuncuya yapmak icin 
+							// css kurali last child kullanabilirsin 
+							// margin-top: 30vh;
 							background: rgba( 0, 28, 64, 0.7 );
 
-							article {
-								
+							article {	
 								main {
 									p {
 										padding: 0.4rem;
@@ -357,6 +386,13 @@ html{
 									}
 								}
 							}
+						}
+						// duzelttim hileni
+
+						section:nth-last-child(1) {
+							margin-top: 10vw;
+							width: 79.2vw;
+							border-radius: 2%;
 						}
 					}	
 				}

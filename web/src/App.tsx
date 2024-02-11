@@ -17,14 +17,14 @@ function App() {
 		<body className="app">
 			<main id="top">
 				<article>
-					<header>
+					<header className="article__header">
 						<a href="#top" id="logo">
 							<h3> {data.content.logo} </h3>
 						</a>
 						<Navigation data={data} />
 					</header>
-					<main className="content">
-						<article>
+					<main className="article__main">
+						<article className="main">
 							<Sections model={sections} />
 						</article>
 					</main>
@@ -45,7 +45,7 @@ const Sections = (props: { model: SectionModel[] }) =>
 		cv: 		<Cv s={s} />,
 		footer: 	<Footer s={s} />,
 		// gecici olarak
-		generic: 	<Section s ={s}/>,
+		// generic: 	<Section s ={s}/>,
 	  }[s.name])
   );
 

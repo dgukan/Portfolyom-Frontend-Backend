@@ -8,18 +8,26 @@ const Navigation = (params: { data: ComponentData }) => {
     // useeffect yada state neden gerekti anlamadigini sor
     const [internalNavigation, setInternalNavigation] = useState<NavigationModel[]>([]);
     const [externalNavigation, setExternalNavigation] = useState<NavigationModel[]>([]);
-    
     useEffect(() => {
-        const internalNavigation: NavigationModel[] = [];
-        const externalNavigation: NavigationModel[] = [];
+        const internalNav: NavigationModel[] = [];
+        const externalNav: NavigationModel[] = [];
 
-        // ... yi bana sor
-        params.data.nav.forEach((n) => (
-            (n.icon == null) 
-            ? setInternalNavigation([...internalNavigation, n]) 
-            : setExternalNavigation([...externalNavigation, n])
-        ));            
-    },[params.data.nav]);
+        params.data.nav.forEach((n) => {
+            if (n.icon == null) {
+                internalNav.push(n);
+            } else {
+                externalNav.push(n);
+            }
+        });
+
+        setInternalNavigation(internalNav);
+        setExternalNavigation(externalNav);
+    }, [params.data.nav]);
+
+    console.log({
+        internalNavigation,
+        externalNavigation
+    });
 
     return <>
         <nav className="responsive">

@@ -53,7 +53,7 @@ export default class Data {
                 text: "Eğitim"
             },
             {
-                href: "project", 
+                href: "experience", 
                 text: "Projelerim"
             },
             {
