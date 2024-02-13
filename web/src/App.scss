@@ -12,7 +12,7 @@ html{
 				height: 100%;
 				//Navigation Css Kodları
 				header.article__header {
-					position: fixed;
+					// position: fixed;
 					// z-index: 2;
 					overflow-y: hidden;
 					background-color: #001c40;
@@ -83,18 +83,16 @@ html{
 				main.article__main {
 					//display flexi kapattım ve position absolute yaptım.
 
-					// flex: 80%;
+					flex: 80%;
 					background-image: url('../public/bg5.jpg');
 					background-repeat: no-repeat;
 					background-position: center;
 					background-size: cover;
-					position: absolute;
-					top: 0;
-					right: 0;
-					// display: flex;
+					display: flex;
 					// flex-direction: row;
 					align-content: center;
 					justify-content: center;
+					// margin-left: 24.5rem;
 
 					article {
 						all:unset;
