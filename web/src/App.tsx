@@ -14,22 +14,22 @@ function App() {
 	const { sections } = content;
 
 	return (
-		<body className="app">
-			<main id="top">
+		<body className="app"  id="top">
 				<article>
+          {/* sidebar */}
 					<header className="article__header">
 						<a href="#top" id="logo">
 							<h3> {data.content.logo} </h3>
 						</a>
 						<Navigation data={data} />
 					</header>
+          {/* content */}
 					<main className="article__main">
 						<article className="main">
 							<Sections model={sections} />
 						</article>
 					</main>
 				</article>
-			</main>
 		</body>
 	);
 }
