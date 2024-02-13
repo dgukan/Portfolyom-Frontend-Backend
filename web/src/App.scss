@@ -6,16 +6,13 @@ html{
   	
 	body.app {
 		text-align: center;
-
+		//Bu arada main vardı ancak bir ise yaramadığı için onu sildim . app.tsx'den de sildim
 			article {
 				display: flex;
 				height: 100%;
-				// class vermedigimiz icin bu seviyedeki tum headerlara bu kurallari uyguladi
-				// header {
-
 				//Navigation Css Kodları
 				header.article__header {
-					// position: fixed;
+					position: fixed;
 					// z-index: 2;
 					overflow-y: hidden;
 					background-color: #001c40;
@@ -84,38 +81,31 @@ html{
 				}			
 				//Content Bölümü Kodları
 				main.article__main {
-					flex: 80%;
+					//display flexi kapattım ve position absolute yaptım.
+
+					// flex: 80%;
 					background-image: url('../public/bg5.jpg');
 					background-repeat: no-repeat;
 					background-position: center;
 					background-size: cover;
-					display: flex;
+					position: absolute;
+					top: 0;
+					right: 0;
+					// display: flex;
 					// flex-direction: row;
 					align-content: center;
 					justify-content: center;
-					// hile ile sagdaki containerin icindekileri saga ittin
-					// margin-left: 24.5rem;
 
 					article {
 						all:unset;
 						display: flex;
-						// 
-						// soldaki absolute oldugu icin flex ile duzenlenemez
-						// sagdakine 20% margin yada left: gibi birsey vermen gerekiyor
-						// verince ust uste gelmezler 
 						width: 100%;
-						// margin-left: 20%;
-						// 
 						flex-direction: column;
 						justify-content: center;
 						align-items: center;
-						// hile ile soldaki bari footer'in hep uzerinde kalmasini sagladin
-						// z-index: 1;
 						color: #fff;
 						position: relative;
 
-						// class belirtmedik hepsine ekledi tum article lara
-						// &::before {
 						&.main::before {
 							content: '';
 							position: absolute;
@@ -127,7 +117,6 @@ html{
 							z-index: 1;
 						}
 
-						// fix tum sectionlardaki article i resetle ki hersey ortalansin
 						section {
 							article{ 
 								margin: 0;
@@ -360,19 +349,11 @@ html{
 							border-top: 0.1rem solid #fff;
 							text-align: center;
 							position: relative;
-							// bottom: 0.1rem;
 							z-index: 2;
 							color: #fff;
 							padding: 3rem;
-							//footer yazilarini hilesiz ortala
 							display:flex;
 							justify-content: center;
-							// 
-							// hileli olarak footer ve ustundeki elementin son icerikleri arasina bosluk attin
-							// bunu padding olarak o arraydeki son elemente vermen gerek
-							// anahtarlarin siralari degisse bile bunu hep sonuncuya yapmak icin 
-							// css kurali last child kullanabilirsin 
-							// margin-top: 30vh;
 							background: rgba( 0, 28, 64, 0.7 );
 
 							article {	
@@ -386,12 +367,10 @@ html{
 								}
 							}
 						}
-						// duzelttim hileni
 
 						section:nth-last-child(1) {
 							margin-top: 10vw;
 							width: 79.2vw;
-							// margin-left: 5.8rem;
 						}
 					}	
 				}
