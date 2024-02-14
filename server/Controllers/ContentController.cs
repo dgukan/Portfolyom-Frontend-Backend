@@ -4,22 +4,29 @@ using System.Net.Mime;
 
 namespace porfolyomBackend.Controllers;
 
+
+//annotation -> dipnot
 [ApiController]
 [Route("[controller]")]
+//Controller -> Kumanda 
 public class ContentController : ControllerBase
 {
-    //
+    //Class property -> Sınıf özelliği
     private readonly ILogger<ContentController> _logger;
 
+    //Controller constructor -> Constructor -> inşa etmek - yaratmak vs
     public ContentController(ILogger<ContentController> logger)
     {
         _logger = logger;
     }
 
     [HttpGet(Name = "GetContent")]
-    public Content Get()
+    
+
+    //Controller Action -> Metot değil fonksiyon değil -> Kumanda Eylemi
+    public Content Get() //Parametre -> Model demek. Get'in içine girdiğimiz şeyler model olur ve sayfayı ona göre filtreleyebiliriz.
     {
-        return new Content
+        return new Content //Model -> 
         {
             Navigation = new List<Navigation>
             {
