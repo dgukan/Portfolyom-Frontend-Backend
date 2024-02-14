@@ -12,7 +12,7 @@ html{
 				height: 100%;
 				//Navigation Css Kodları
 				header.article__header {
-					// position: fixed;
+					position: fixed;
 					// z-index: 2;
 					overflow-y: hidden;
 					background-color: #001c40;
@@ -20,6 +20,7 @@ html{
 					height: 100vh;
 					width: 20%;
 					display: flex;
+					flex: 20%;
 					justify-content: space-between;
 					flex-direction: column;
 					
@@ -81,8 +82,6 @@ html{
 				}			
 				//Content Bölümü Kodları
 				main.article__main {
-					//display flexi kapattım ve position absolute yaptım.
-
 					flex: 80%;
 					background-image: url('../public/bg5.jpg');
 					background-repeat: no-repeat;
@@ -92,7 +91,7 @@ html{
 					// flex-direction: row;
 					align-content: center;
 					justify-content: center;
-					// margin-left: 24.5rem;
+					margin-left: 30.3rem;
 
 					article {
 						all:unset;
