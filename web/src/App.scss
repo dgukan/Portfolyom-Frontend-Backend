@@ -82,7 +82,7 @@ html{
 				}			
 				//Content Bölümü Kodları
 				main.article__main {
-					flex: 80%;
+					width: 80%;
 					background-image: url('../public/bg5.jpg');
 					background-repeat: no-repeat;
 					background-position: center;
@@ -91,7 +91,7 @@ html{
 					// flex-direction: row;
 					align-content: center;
 					justify-content: center;
-					margin-left: 30.3rem;
+					margin-left: 19.9%;
 
 					article {
 						all:unset;
