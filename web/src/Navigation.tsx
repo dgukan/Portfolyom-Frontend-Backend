@@ -1,54 +1,34 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ComponentData } from "./data";
-import { Navigation as NavigationModel } from "./model/componentData";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { useEffect, useState } from "react";
+import { NavigationElement } from "./model/componentData";
+import { IconName, IconPrefix, IconProp } from "@fortawesome/fontawesome-svg-core";
+import _ from "./view/_";
 
-const Navigation = (params: { data: ComponentData }) => {
-    // useeffect yada state neden gerekti anlamadigini sor
-    const [internalNavigation, setInternalNavigation] = useState<NavigationModel[]>([]);
-    const [externalNavigation, setExternalNavigation] = useState<NavigationModel[]>([]);
-    useEffect(() => {
-        const internalNav: NavigationModel[] = [];
-        const externalNav: NavigationModel[] = [];
+const Navigation = (params: { elements: NavigationElement[] }) => {
+    // faLinkedin in prefix ve postfix olarak ayrilmasi gerek
+    // bir programlama klasigi olan string manipulation(manipulasyonu) yapacan
+    // prefix ve icon name'i as dedigimiz tipden gorduk ve yazdik. (mouse ile takip et gor)
 
-        params.data.nav.forEach((n) => {
-            if (n.icon == null) {
-                internalNav.push(n);
-            } else {
-                externalNav.push(n);
-            }
-        });
-
-        setInternalNavigation(internalNav);
-        setExternalNavigation(externalNav);
-    }, [params.data.nav]);
-
-    console.log({
-        internalNavigation,
-        externalNavigation
-    });
-
-    return <>
+return <>
         <nav className="responsive">
             <ul>
-                {internalNavigation.map((n) => <>
+                {params.elements.filter(e => e.type === 'internal').map((n, i) => <_ key={`${n.type}-${i}`}>
                     <li>
                         <a href={`#${n.href}`}> {n.text} </a>
                     </li>
-                </>)}
-
+                </_>)}
             </ul>
         </nav>
         <footer>
             <ul>
-                {externalNavigation.map((socialMediaIcon) => <>
+                {params.elements.filter(e => e.type === 'external').map((n, i) => <_ key={`${n.type}-${i}`}>
                     <li>
-                        <a href={socialMediaIcon.href} target={socialMediaIcon.icon?.target}>
-                            <FontAwesomeIcon icon={socialMediaIcon.icon?.icon as IconProp} />
+                        <a href={n.href} target={n?.target}>
+                            <FontAwesomeIcon icon={[
+                                `${n.icon.substring(0, 2)}r` as IconPrefix, 
+                                n.icon.substring(2, n.icon.length) as IconName]} />
                         </a>
                     </li>
-                </>)}
+                </_>)}
             </ul>
         </footer>
     </>;
@@ -56,17 +36,3 @@ const Navigation = (params: { data: ComponentData }) => {
 
 export default Navigation;
 
-    // {/* TODO: Responsive menu */}
-    // function openMenu(event: React.MouseEvent<HTMLAnchorElement>): void {
-    //     event.preventDefault();
-
-    //     const link = document.getElementById("header__nav");
-    //     if (link)
-    //       link.classList.toggle("responsive");
-    // };
-                // {/* TODO: Responsive menu */}
-                // {/* <li id="menu">
-                //     <a href="#" onClick={(hle:React.MouseEvent<HTMLAnchorElement>) => openMenu(hle)}>
-                //         <i className="fa fa-b0ars menu"></i>
-                //     </a>
-                // </li> */}

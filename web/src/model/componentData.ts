@@ -1,13 +1,18 @@
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export default interface ComponentData {
-    content: Content;
-    nav: Navigation[];
+    sections: Section[];
+    // component datada, bu arrayde navigation objeleri var, evet dogru.
+    // fakat bu objelerin uzerinde ek olarak, type anahtarida var.
+    // type anahtarida sadece internal yada external olabilir.
+    nav: NavigationElement[];
 }
 
+//Daha rahat anlamak ve referanslayabilmek icin, bu yukardaki tipe bir isim vermenin yeridir
+export type NavigationElement = (Navigation & {type: 'internal' | 'external'});
+
 export interface Content {
-    logo: string;
-    sections: Section[]
+    navigation: Navigation[];
+    sections: Section[];
 };
 
 
@@ -21,10 +26,9 @@ export interface Section {
 }
 
 export interface Navigation {
-    href: string;
+    logo: string,
     text?: string;
-    icon?:  {
-        target: string;
-        icon: IconProp;
-    }
+    href: string;
+    target: string;
+    icon: string;
 }

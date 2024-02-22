@@ -62,19 +62,19 @@ public class ContentController : ControllerBase
                 {
                     Href = "https://www.linkedin.com/in/do%C4%9Fukan-ko%C3%A7-884758254/",
                     Target = "linkedin",
-                    Icon = "faLinkedin"
+                    Icon = "fa-brands fa-linkedin"
                 },
                 new Navigation
                 {
                     Href = "https://github.com/dgukan",
                     Target = "git",
-                    Icon = "faGithub"
+                    Icon = "fa brands fa-Github"
                 },
                 new Navigation
                 {
                     Href = "mailto:",
                     Target = "mail",
-                    Icon = "faEnvelope"
+                    Icon = "fa-regular fa-envelope"
                 }
             },
 
