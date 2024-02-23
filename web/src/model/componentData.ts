@@ -30,5 +30,5 @@ export interface Navigation {
     text?: string;
     href: string;
     target: string;
-    icon: string;
+    icon: string ;
 }
