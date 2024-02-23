@@ -1,7 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavigationElement } from "./model/componentData";
-import { IconName, IconPrefix, IconProp } from "@fortawesome/fontawesome-svg-core";
+import { IconName, IconPrefix, IconProp, icon } from "@fortawesome/fontawesome-svg-core";
+import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import _ from "./view/_";
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 const Navigation = (params: { elements: NavigationElement[] }) => {
     // faLinkedin in prefix ve postfix olarak ayrilmasi gerek
@@ -23,9 +25,7 @@ return <>
                 {params.elements.filter(e => e.type === 'external').map((n, i) => <_ key={`${n.type}-${i}`}>
                     <li>
                         <a href={n.href} target={n?.target}>
-                            <FontAwesomeIcon icon={[
-                                `${n.icon.substring(0, 2)}r` as IconPrefix, 
-                                n.icon.substring(2, n.icon.length) as IconName]} />
+                            <SocialMedia model={[n.icon]}/>
                         </a>
                     </li>
                 </_>)}
@@ -35,4 +35,12 @@ return <>
 };
 
 export default Navigation;
+
+const SocialMedia = (props: {model: NavigationElement[]}) => props.model.map(
+    (s) => ({
+        linkedin: <FontAwesomeIcon icon={faLinkedinIn}/>,
+        githup: <FontAwesomeIcon icon= {faGithub} />,
+        mail: <FontAwesomeIcon icon={faEnvelope} />
+    }[s.icon])
+)
 

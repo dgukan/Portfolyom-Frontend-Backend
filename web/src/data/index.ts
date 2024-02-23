@@ -44,34 +44,34 @@ export default class Data {
             ]
         },
         nav: [
-            {
-                href: "about", 
-                text: "Hakkımda"
-            },
-            {
-                href: "education", 
-                text: "Eğitim"
-            },
-            {
-                href: "experience", 
-                text: "Projelerim"
-            },
-            {
-                href: "cv", 
-                text: "Özgeçmiş"
-            },
-            {
-                href:"https://www.linkedin.com/in/do%C4%9Fukan-ko%C3%A7-884758254/",
-                icon : { target: 'linkedin', icon: faLinkedin }
-            },
-            {
-                href:"https://github.com/dgukan",
-                icon: { target: 'git', icon: faGithub }
-            },
-            {
-                href:"mailto:",
-                icon: { target:"mail", icon: faEnvelope}
-            }
+            // {
+            //     href: "about", 
+            //     text: "Hakkımda"
+            // },
+            // {
+            //     href: "education", 
+            //     text: "Eğitim"
+            // },
+            // {
+            //     href: "experience", 
+            //     text: "Projelerim"
+            // },
+            // {
+            //     href: "cv", 
+            //     text: "Özgeçmiş"
+            // },
+            // {
+            //     href:"https://www.linkedin.com/in/do%C4%9Fukan-ko%C3%A7-884758254/",
+            //     icon : { target: 'linkedin', icon: faLinkedin }
+            // },
+            // {
+            //     href:"https://github.com/dgukan",
+            //     icon: { target: 'git', icon: faGithub }
+            // },
+            // {
+            //     href:"mailto:",
+            //     icon: { target:"mail", icon: faEnvelope}
+            // }
         ],
     };        
 }

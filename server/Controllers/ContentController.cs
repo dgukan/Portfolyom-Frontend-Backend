@@ -72,7 +72,7 @@ public class ContentController : ControllerBase
                 },
                 new Navigation
                 {
-                    Href = "mailto:",
+                    Href = "mailto:dogukankoc2507@gmail.com",
                     Target = "mail",
                     Icon = "fa-regular fa-envelope"
                 }

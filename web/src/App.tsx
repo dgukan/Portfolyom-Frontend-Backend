@@ -7,8 +7,7 @@ import { Header } from "./view/section/header";
 
 
 function App() {
-  // mouse u uzerine gotur
-  // tipi kopyala
+
 const [data, setData] = useState<null | ComponentData>(null); 
 
   useEffect(() =>{ fetchContent(setData) },[]);
