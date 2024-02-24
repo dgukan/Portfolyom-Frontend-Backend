@@ -1,5 +1,3 @@
-// Models.ts dosyası
-
 export default interface Content {
   Navigation: Navigation[];
   Sections: Section[];

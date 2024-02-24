@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { NavigationElement } from "./model/componentData";
 import {  } from "@fortawesome/fontawesome-svg-core";
 import { faEnvelope} from "@fortawesome/free-solid-svg-icons";
-import _ from "./view/_";
+import _ from "./fragment";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { NavigationElement } from "../model/componentData";
 
 const Navigation = (params: { elements: NavigationElement[] }) => {
 return <>
@@ -20,14 +20,14 @@ return <>
             <ul>
                 {params.elements.filter(e => e.type === 'external').map((n, i) => <_ key={`${n.type}-${i}`}>
                     <li>
-                        <a href={n.href} target={n?.target}>
+                        <a href={n.href} target={n?.icon?.target}>
                         {(
                             {
                                 linkedin: <FontAwesomeIcon icon={faLinkedinIn}/>,
-                                githup: <FontAwesomeIcon icon= {faGithub} />,
-                                mail: <FontAwesomeIcon icon={faEnvelope} />
+                                github: <FontAwesomeIcon icon= {faGithub} />,
+                                envelope: <FontAwesomeIcon icon={faEnvelope} />
                             }
-                          [n.icon])
+                          [n.icon?.name as 'linkedin' | 'github' | 'envelope'])
                         }
                         </a>
                     </li>
